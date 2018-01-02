@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es2016", "dom"],
+    "module": "amd",
+    "strict": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "outFile": "htdocs/js/main.js"
+  },
+  "include": [
+    "htdocs/ts/**/*"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "develop": "concurrently \"tsc -w\" \"http-server htdocs -p 8080\""
+  },
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "http-server": "^0.10.0",
+    "typescript": "^2.6.2"
+  }
+}

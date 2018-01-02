@@ -12,6 +12,6 @@ Simple dungeon crawler, stats and card based
 ### Making Changes
 
 1. Run `yarn develop`
-1. Add/edit files in `htdocs`
-1. [TypeScript](https://www.typescriptlang.org/) source in `htdocs/ts` is automatically compiled to `htdocs/js/main.js`
+1. Add/edit [TypeScript](https://www.typescriptlang.org/) source in `lib` (automatically compiled into `htdocs/main.js`)
+1. Add/edit standard web files in `htdocs`
 1. Open http://localhost:8080 in your favorite browser

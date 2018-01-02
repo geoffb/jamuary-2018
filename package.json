@@ -1,12 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "build": "tsc",
-    "develop": "concurrently \"tsc -w\" \"http-server htdocs -p 8080\""
+    "build": "browserify lib/main.ts -p [ tsify -c tsconfig.json ] > htdocs/main.js",
+    "develop": "concurrently \"watchify lib/main.ts -d -v -p [ tsify -c tsconfig.json ] -o htdocs/main.js\" \"http-server htdocs -p 8080\""
   },
-  "dependencies": {
+  "devDependencies": {
+    "browserify": "^14.5.0",
     "concurrently": "^3.5.0",
     "http-server": "^0.10.0",
-    "typescript": "^2.6.2"
+    "tsify": "^3.0.4",
+    "typescript": "^2.6.2",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "@mousepox/random": "^0.1.0"
   }
 }

@@ -1,14 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "lib": ["es2016", "dom"],
-    "module": "amd",
+    "module": "commonjs",
     "strict": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "outFile": "htdocs/js/main.js"
-  },
-  "include": [
-    "htdocs/ts/**/*"
-  ]
+    "removeComments": true
+  }
 }

@@ -44,6 +44,14 @@ export class TileMap {
     this.cells[index] = value;
   }
 
+  public forEach(f: (value: number, x: number, y: number) => void) {
+    for (let y = 0; y < this.height; ++y) {
+      for (let x = 0; x < this.width; ++x) {
+        f(this.get(x, y), x, y);
+      }
+    }
+  }
+
   public generateEdgeMask(x: number, y: number): number {
     let mask = 0;
     let a = this.get(x, y);

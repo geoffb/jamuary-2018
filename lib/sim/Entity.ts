@@ -1,4 +1,6 @@
-export class Entity {
+import { IRectangle } from "./math";
+
+export class Entity implements IRectangle {
 
   x = 0;
   y = 0;
@@ -18,6 +20,14 @@ export class Entity {
   jumpImpulse = -150;
 
   private jumpCount = 0;
+
+  public get right(): number {
+    return this.x + this.width;
+  }
+
+  public get bottom(): number {
+    return this.y + this.height;
+  }
 
   public jump() {
     if (this.jumpCount > 0) { return; }

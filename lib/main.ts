@@ -48,6 +48,18 @@ const render = () => {
   ctx.fillStyle = Palette.Blue;
   ctx.fillRect(0, 0, STAGE_WIDTH, STAGE_HEIGHT);
 
+  // Render map
+  const size = level.map.tileSize;
+  for (let y = 0; y < level.map.height; ++y) {
+    for (let x = 0; x < level.map.width; ++x) {
+      let value = level.map.get(x, y);
+      if (value === 1) {
+        ctx.fillStyle = Palette.Brown;
+        ctx.fillRect(x * size, y * size, size, size);
+      }
+    }
+  }
+
   for (let entity of level.entities) {
 
     ctx.fillStyle = Palette.Peach;

@@ -14,6 +14,10 @@ export function sign(n: number): number {
   return n > 0 ? 1 : n == 0 ? 0 : -1;
 }
 
+export function clamp(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), max);
+}
+
 export function getMinSeparation(a: IRectangle, b: IRectangle): IVector {
   let msv = { x: 0, y: 0 };
 

@@ -13,13 +13,13 @@ export class Entity implements IRectangle {
   vx = 0;
   vy = 0;
 
-  speed = 80;
+  speed = 60;
 
   dx = 0;
 
   sprite = -1;
 
-  jumpImpulse = -150;
+  jumpImpulse = -125;
 
   private jumpCount = 0;
 

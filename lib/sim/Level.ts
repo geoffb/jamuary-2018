@@ -32,12 +32,9 @@ export class Level {
 
     this.entities.push(this.player);
 
-    this.map.resize(40, 20);
-
-    // this.map.set(19, 15, 1);
-    // this.map.set(19, 18, 1);
-    // this.map.set(19, 19, 1);
-    // this.map.set(18, 19, 1);
+    this.map.resize(80, 40);
+    this.width = this.map.width * this.map.tileSize;
+    this.height = this.map.height * this.map.tileSize;
 
     this.map.forEach((value, x, y) => {
       let tile = Math.random() < 0.3 ? 1 : 0;

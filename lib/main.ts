@@ -5,7 +5,7 @@ import { Palette } from "./palette";
 
 const STAGE_WIDTH = 640;
 const STAGE_HEIGHT = Math.floor(STAGE_WIDTH / 2);
-const VIEW_SCALE = 2;
+const VIEW_SCALE = 3;
 const SPRITE_SIZE = 16;
 
 // Game simulation
